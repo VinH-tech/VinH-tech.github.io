@@ -17,12 +17,14 @@ body {
 }
 
 .sidebar {
-  width: 25%;
-  padding: 60px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;          /* ← changed from right */
+  width: 240px;
   height: 100vh;
-  border-left: 1px solid #e5e7eb;
+  padding: 2rem 1.5rem;
+}
+
 }
 
 .sidebar ul {
