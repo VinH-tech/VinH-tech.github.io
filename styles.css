@@ -1,62 +1,37 @@
-body {
+/* Base reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
   color: #1f2933;
   background-color: #ffffff;
+  line-height: 1.6;
 }
 
-.container {
+/* Layout wrapper */
+.page {
   display: flex;
-  max-width: 1200px;
-  margin: auto;
+  min-height: 100vh;
 }
 
-.content {
-  width: 75%;
-  padding: 60px 40px;
-}
-
+/* Sidebar (LEFT) */
 .sidebar {
   position: fixed;
+  left: 0;
   top: 0;
-  left: 0;          /* ← changed from right */
-  width: 240px;
+  width: 260px;
   height: 100vh;
-  padding: 2rem 1.5rem;
+  padding: 40px 24px;
+  background-color: #f8fafc;
+  border-right: 1px solid #e5e7eb;
 }
 
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin-bottom: 16px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-}
-
-.sidebar a:hover {
-  color: #111827;
-}
-
-section {
-  margin-bottom: 80px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-}
-
+/* Sidebar title / name */
+.sidebar h1 {
+  font-size: 1.1rem;
+  font-weight: 6
