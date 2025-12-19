@@ -1,74 +1,365 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vinayak Hattangadi</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+import React from 'react';
+import { Button } from '../components/ui/button';
+import { Card } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Mail, Phone, Linkedin, Download, Award, Briefcase, Code, Users } from 'lucide-react';
 
-<body>
+const Home = () => {
+  const experiences = [
+    {
+      company: 'Unisys Corporation',
+      title: 'Chief Architect / Account CTO',
+      tenure: 'Mar 2021 - Sep 25',
+      responsibilities: [
+        'Large-scale transformation & modernization leadership',
+        'Executive oversight to the PMO, ensuring governance and alignment across transformational and strategic projects',
+        'Continuous service improvements – Own & drive CSI roadmaps',
+        'C&O and executive relationship management',
+        'Account profitability'
+      ]
+    },
+    {
+      company: 'Optum Global Solutions – United Health Group',
+      title: 'Director Enterprise Hosting & Network Security',
+      tenure: 'Jan 2019 - Feb 21',
+      responsibilities: [
+        'Technology and Operations transformation',
+        'Departmental finance management - $2M annual',
+        'Workforce strategy and people management - 450 associates across India, Philippines & Puerto Rico',
+        'Multi-technology delivery & operational excellence',
+        'Process re-engineering & standardization',
+        'C&O and executive relationship management'
+      ]
+    },
+    {
+      company: 'CenturyLink Technologies',
+      title: 'Sr. Manager Global Hosting & Pre-sales',
+      tenure: 'Oct 2012 - Jan 2019',
+      responsibilities: [
+        'Workforce strategy and people management - 100 associates across India',
+        'Directed global Post-sales engineering & Data Center engineering',
+        'Managed hosting operations for 3500 clients globally',
+        'Pre-sales & partner engagements for Managed Services'
+      ]
+    },
+    {
+      company: 'MicroAnd Pvt. Ltd.',
+      title: 'Solutions Manager- Network & Security',
+      tenure: 'Mar 2010 - Oct 2012',
+      responsibilities: [
+        'Led new business pursuits in the Network & Security space, developed service offerings, and oversaw solution implementation and transformation initiatives',
+        'Worked with delivery teams to define service level agreements and resource requirements'
+      ]
+    },
+    {
+      company: 'IBM India Pvt. Ltd.',
+      title: 'Technical Project Manager',
+      tenure: 'Apr 2008 - Mar 2010',
+      responsibilities: [
+        'Led IT infrastructure modernization projects for a large EMEA account to ensure it met the technical specifications and project goals',
+        'Infrastructure upgrade project with a budget of $20 Million'
+      ]
+    },
+    {
+      company: 'Dimension Data Ltd (NTT Data)',
+      title: 'Engineering Project Manager',
+      tenure: 'Jun 2003 - Apr 2008',
+      responsibilities: [
+        'Led Observability tools support and automation application support teams',
+        'Managed SCOM operations, projects, and Remedy support',
+        'Provided pre-sales support and served as a process owner for ITIL Configuration & Release & Change Management'
+      ]
+    },
+    {
+      company: 'Wipro Infotech',
+      title: 'Network Operations Engineer',
+      tenure: '1999 - Jun 2003',
+      responsibilities: [
+        'Maintained a Cisco-based WAN network, Public DNS, DHCP & IT Systems',
+        'Troubleshooted routing issues, and managed leased circuits'
+      ]
+    },
+    {
+      company: 'Wipro Net Ltd',
+      title: 'Network Operations Engineer',
+      tenure: '1999 - Jun 2003',
+      responsibilities: [
+        'Maintained a Cisco-based WAN network, Public DNS, DHCP & IT Systems',
+        'Troubleshooted routing issues, and managed leased circuits'
+      ]
+    }
+  ];
 
-<div class="container">
+  const certifications = [
+    { name: 'Microsoft Certified: Azure Solutions Architect Expert', year: '2025', org: 'Microsoft' },
+    { name: 'Microsoft Certified: Azure Administrator Associate', year: '2025', org: 'Microsoft' },
+    { name: 'FinOps Certified Practitioner', year: '2025', org: 'The Linux Foundation' },
+    { name: 'Building in Microsoft Copilot Studio', year: '2025', org: 'LinkedIn' },
+    { name: 'Certified Information Security Manager® (CISM)', year: '2024', org: 'ISACA' },
+    { name: 'Microsoft Certified: Azure AI Fundamentals', year: '2024', org: 'Microsoft' },
+    { name: 'Azure Fundamentals - AZ-900', year: '2021', org: 'Microsoft' },
+    { name: 'TOGAF® Certification Program', year: '2021', org: 'The Open Group' },
+    { name: 'PMP', year: '2009', org: 'Project Management Institute' }
+  ];
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
+  const skillCategories = [
+    {
+      category: 'Cloud, Infrastructure & Operations Leadership',
+      skills: [
+        'Hybrid-Cloud Operations Leadership (Azure, On-Premise, VMware Private Cloud)',
+        'Cloud Infrastructure Modernization',
+        'Platform Engineering & Enterprise Systems Delivery',
+        'Multi-Tower Operations Leadership (Cloud, Infrastructure, Security, Hosting)',
+        'SRE & DevOps Maturity Uplift',
+        'Observability Engineering & AIOps/AI-driven Operations'
+      ]
+    },
+    {
+      category: 'People Leadership & Organizational Transformation',
+      skills: [
+        'Leadership of Global, Distributed Teams (450+ Associates)',
+        'Building High-Performing Cloud & Infrastructure Teams',
+        'Coaching & Mentoring Technology Leaders',
+        'Workforce Strategy, Talent Development & Upskilling',
+        'Cross-Functional Leadership Across Engineering, Architecture & Security'
+      ]
+    },
+    {
+      category: 'Financial Governance & Cost Management',
+      skills: [
+        'FinOps-Driven Cloud Cost Optimization',
+        'Resource & Capacity Optimization',
+        'Spend Governance for Multi-Tower Technology Delivery',
+        'Forecasting & Operational Cost Modeling',
+        'Data-Driven Financial Decision-Making'
+      ]
+    },
+    {
+      category: 'Risk Management, Security & Governance',
+      skills: [
+        'Operational Risk Management & Resilience Engineering',
+        'Compliance with ITIL, ISO, NIST & Enterprise Security Baselines',
+        'Cloud Security Considerations & Secure Infrastructure Practices',
+        'Incident Response, Escalation Leadership & MTTR Reduction'
+      ]
+    },
+    {
+      category: 'Executive Stakeholder Management',
+      skills: [
+        'CXO-Level Stakeholder Engagement',
+        'Executive Communication & Technology Storytelling',
+        'Partnering with Architecture, Security & Engineering Leadership',
+        'Business Alignment & Enterprise Prioritization'
+      ]
+    }
+  ];
 
-    <section id="home">
-      <h1>A technology leader who stays close to the work</h1>
-      <p>
-        I have spent my career solving complex technology and operational problems
-        in enterprise environments — modernizing legacy infrastructure, stabilizing
-        global IT operations, and reducing risk at scale.
-      </p>
-    </section>
+  const handleDownloadResume = () => {
+    // This will be updated when we integrate with backend
+    window.open('https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/m0x3cnnu_Sr.%20Dir%20WalMart_Full.pdf', '_blank');
+  };
 
-    <section id="about">
-      <h2>About / My Story</h2>
-      <p>
-        I began my career in hands-on technical roles, working directly on live
-        production environments where reliability and security mattered every day...
-      </p>
-    </section>
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      {/* Header */}
+      <header className="fixed top-0 w-full bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#333333] z-50">
+        <div className="container mx-auto px-6 py-4">
+          <nav className="flex justify-between items-center">
+            <h1 className="text-xl font-bold tracking-tight">VINAYAK HATTANGADI</h1>
+            <div className="hidden md:flex gap-8">
+              <a href="#about" className="text-[#b0b0b0] hover:text-white transition-colors">About</a>
+              <a href="#experience" className="text-[#b0b0b0] hover:text-white transition-colors">Experience</a>
+              <a href="#skills" className="text-[#b0b0b0] hover:text-white transition-colors">Expertise</a>
+              <a href="#certifications" className="text-[#b0b0b0] hover:text-white transition-colors">Certifications</a>
+              <a href="#contact" className="text-[#b0b0b0] hover:text-white transition-colors">Contact</a>
+            </div>
+          </nav>
+        </div>
+      </header>
 
-    <section id="experiences">
-      <h2>Experiences</h2>
-      <!-- You will paste the locked Experiences bullets here -->
-    </section>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block mb-4">
+                <Badge variant="outline" className="border-[#888888] text-[#b0b0b0] px-4 py-1">
+                  Technology & Transformation Leader
+                </Badge>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Vinayak<br />Hattangadi
+              </h1>
+              <p className="text-xl text-[#b0b0b0] mb-8 leading-relaxed">
+                20+ years driving digital transformation, GCC/ODC operations, and enterprise solutions for global organizations
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button onClick={handleDownloadResume} className="bg-white text-black hover:bg-[#e0e0e0] transition-all">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </Button>
+                <Button variant="outline" className="border-[#888888] text-white hover:bg-[#1a1a1a]" asChild>
+                  <a href="#contact">Get in Touch</a>
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#333333] to-transparent opacity-20 rounded-lg"></div>
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/9yhwvn3y_Vinayak_Pic.jpeg"
+                  alt="Vinayak Hattangadi"
+                  className="rounded-lg shadow-2xl w-full max-w-md border border-[#333333]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>
-        <a href="assets/Vinayak_Hattangadi_Resume.pdf" target="_blank">
-          Download Resume (PDF)
-        </a>
-      </p>
-    </section>
+      {/* About Section */}
+      <section id="about" className="py-20 px-6 bg-[#0f0f0f]">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">About</h2>
+          <div className="space-y-6 text-[#c0c0c0] leading-relaxed">
+            <p className="text-lg">
+              Vinayak brings to the table over two decades of experience leading GCC/ODC operations, driving digital transformations, and shaping enterprise pre-sales and solution strategies for global organizations. Known for his engineering-first approach and ability to simplify complex decisions, he aligns technology with business priorities and delivers outcomes that strengthen resilience, efficiency, and long-term value to his clients.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <Card className="bg-[#1a1a1a] border-[#333333] p-6 hover:bg-[#222222] transition-colors">
+                <Briefcase className="h-10 w-10 mb-4 text-[#b0b0b0]" />
+                <h3 className="text-xl font-semibold mb-2 text-white">GCC/ODC Leadership</h3>
+                <p className="text-[#c0c0c0] text-sm">
+                  Over a decade shaping GCC/ODC strategy and delivery, leading teams of 450+ associates across global locations
+                </p>
+              </Card>
+              <Card className="bg-[#1a1a1a] border-[#333333] p-6 hover:bg-[#222222] transition-colors">
+                <Code className="h-10 w-10 mb-4 text-[#b0b0b0]" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Digital Transformation</h3>
+                <p className="text-[#c0c0c0] text-sm">
+                  Multi-year transformation programs spanning cloud, infrastructure, and platform ecosystems with 1,000+ workload migrations
+                </p>
+              </Card>
+              <Card className="bg-[#1a1a1a] border-[#333333] p-6 hover:bg-[#222222] transition-colors">
+                <Users className="h-10 w-10 mb-4 text-[#b0b0b0]" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Enterprise Pre-Sales</h3>
+                <p className="text-[#c0c0c0] text-sm">
+                  15+ years leading 400+ pursuits including 40 major global deals up to $200M TCV
+                </p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="skills">
-      <h2>Key Skills</h2>
-      <!-- Paste locked Key Skills content -->
-    </section>
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">Professional Experience</h2>
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <Card key={index} className="bg-[#1a1a1a] border-[#333333] p-8 hover:border-[#555555] transition-all">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-1 text-white">{exp.title}</h3>
+                    <p className="text-[#b0b0b0] text-lg">{exp.company}</p>
+                  </div>
+                  <Badge variant="secondary" className="bg-[#222222] text-[#d0d0d0] mt-2 md:mt-0">
+                    {exp.tenure}
+                  </Badge>
+                </div>
+                <ul className="space-y-2 text-[#c0c0c0]">
+                  {exp.responsibilities.map((resp, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-[#b0b0b0] flex-shrink-0"></span>
+                      <span>{resp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    <section id="certifications">
-      <h2>Certifications & Badges</h2>
-      <p>Coming soon.</p>
-    </section>
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-6 bg-[#0f0f0f]">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">Core Expertise</h2>
+          <div className="space-y-8">
+            {skillCategories.map((category, index) => (
+              <div key={index}>
+                <h3 className="text-2xl font-semibold mb-4 text-white">{category.category}</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {category.skills.map((skill, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <span className="mr-3 mt-1.5 h-2 w-2 rounded-full bg-[#b0b0b0] flex-shrink-0"></span>
+                      <span className="text-[#c0c0c0]">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+                {index < skillCategories.length - 1 && (
+                  <div className="mt-8 border-b border-[#333333]"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  </main>
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold mb-4 text-center text-white">Professional Certifications</h2>
+          <p className="text-center text-[#c0c0c0] mb-12">Industry-recognized credentials demonstrating technical excellence</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => (
+              <Card key={index} className="bg-[#1a1a1a] border-[#333333] p-6 hover:border-[#555555] transition-all">
+                <Award className="h-8 w-8 mb-4 text-[#b0b0b0]" />
+                <h3 className="font-semibold mb-2 text-white">{cert.name}</h3>
+                <p className="text-sm text-[#c0c0c0]">{cert.org}</p>
+                <Badge variant="outline" className="border-[#555555] text-[#d0d0d0] mt-3">
+                  {cert.year}
+                </Badge>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  <!-- SIDEBAR NAV -->
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About / My Story</a></li>
-      <li><a href="#experiences">Experiences</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#skills">Key Skills</a></li>
-      <li><a href="#certifications">Certifications & Badges</a></li>
-    </ul>
-  </nav>
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-6 bg-[#0f0f0f]">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold mb-6 text-white">Get in Touch</h2>
+          <p className="text-[#c0c0c0] mb-12 text-lg">
+            Open to executive opportunities, consulting engagements, and strategic partnerships
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="mailto:Vinayak.hattangadi@gmail.com" className="flex items-center gap-2 text-[#c0c0c0] hover:text-white transition-colors">
+              <Mail className="h-5 w-5" />
+              Vinayak.hattangadi@gmail.com
+            </a>
+            <a href="tel:+919611337454" className="flex items-center gap-2 text-[#c0c0c0] hover:text-white transition-colors">
+              <Phone className="h-5 w-5" />
+              +91 9611337454
+            </a>
+            <a href="https://www.linkedin.com/in/vinayak-hattangadi-a104836/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#c0c0c0] hover:text-white transition-colors">
+              <Linkedin className="h-5 w-5" />
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </section>
 
-</div>
+      {/* Footer */}
+      <footer className="py-8 px-6 border-t border-[#333333]">
+        <div className="container mx-auto text-center text-[#b0b0b0]">
+          <p>&copy; {new Date().getFullYear()} Vinayak Hattangadi. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
 
-</body>
-</html>
+export default Home;
