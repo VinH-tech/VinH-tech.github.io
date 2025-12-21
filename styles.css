@@ -1,115 +1,40 @@
-/* --- 1. Global Variables & Themes --- */
-:root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --text-main: #ffffff;
-    --text-dim: #b0b0b0;
-    --border: #333333;
-    --accent: #ffffff;
-    --drawer-bg: #111111;
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-[data-theme="light"] {
-    --bg-primary: #f8f9fa;
-    --bg-secondary: #ffffff;
-    --text-main: #1a1a1a;
-    --text-dim: #64748b;
-    --border: #e2e8f0;
-    --accent: #004a99;
-    --drawer-bg: #ffffff;
-}
-
-/* --- 2. Base Reset & Typography --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-    background-color: var(--bg-primary);
+/* Mobile Navigation Styles */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
     color: var(--text-main);
-    font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.6;
-    transition: background-color 0.4s ease;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-/* --- 3. Header & Navigation Updates --- */
-.header {
-    position: fixed;
-    top: 0; width: 100%;
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-    padding: 16px 0;
+@media (max-width: 768px) {
+    .menu-btn { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+    }
+    .nav-links.mobile-active { display: flex; }
 }
 
-[data-theme="light"] .header { background-color: rgba(248, 249, 250, 0.95); }
-
-.nav { display: flex; justify-content: space-between; align-items: center; }
-
-.nav-links { display: flex; gap: 24px; align-items: center; }
-
-.nav-link {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover { color: var(--text-main); }
-
-/* The NEW Portfolio CTA Button in Nav */
-.portfolio-btn {
-    border: 1px solid var(--border);
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: var(--bg-secondary);
-    color: var(--text-main) !important;
-}
-
-.portfolio-btn:hover {
-    border-color: var(--text-dim);
-    background: var(--bg-primary);
-}
-
-/* --- 4. Search Page Components (portfolio.html) --- */
-.search-wrapper { margin: 40px auto; max-width: 600px; text-align: center; }
-
-.search-input {
-    width: 100%; padding: 18px 30px; border-radius: 50px;
-    border: 2px solid var(--border); background: var(--bg-secondary);
-    color: var(--text-main); font-size: 1.1rem; transition: var(--transition);
-}
-
-.search-input:focus { outline: none; border-color: var(--accent); transform: translateY(-4px); }
-
-.results-grid {
+/* Certifications Grid Styles */
+.certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    padding: 40px 0 80px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.card {
-    background: var(--bg-secondary); border: 1px solid var(--border);
-    padding: 32px; border-radius: 16px; cursor: pointer; transition: var(--transition);
+.cert-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
 }
-
-.card:hover { border-color: var(--accent); transform: translateY(-8px); }
-
-/* --- 5. Deep Dive Drawer --- */
-.drawer {
-    position: fixed; top: 0; right: 0; width: 100%; max-width: 500px; height: 100%;
-    background: var(--drawer-bg); border-left: 1px solid var(--border);
-    z-index: 2000; padding: 60px 40px; transform: translateX(100%);
-    transition: var(--transition); box-shadow: -20px 0 60px rgba(0,0,0,0.3);
-    overflow-y: auto;
-}
-
-.drawer.active { transform: translateX(0); }
-
-.btn-close {
-    position: absolute; top: 20px; right: 20px;
-    background: none; border: none
