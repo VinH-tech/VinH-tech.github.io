@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinayak Hattangadi | Technology Leader</title>
+    <title>Vinayak Hattangadi | Technology & Transformation Leader</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-    
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌓</button>
+
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -27,22 +27,37 @@
         </div>
     </header>
 
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">Technology & Transformation Leader</div>
+                    <h1 class="hero-title">Vinayak<br>Hattangadi</h1>
+                    <p class="hero-description">20+ years driving digital transformation, GCC/ODC operations, and enterprise solutions for global organizations.</p>
+                    <div class="hero-buttons">
+                        <a href="https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/m0x3cnnu_Sr.%20Dir%20WalMart_Full.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+                        <a href="portfolio.html" class="btn btn-secondary">Search Strategic Insights</a>
+                    </div>
+                </div>
+                <div class="hero-image-container"><div class="hero-image-wrapper"><img src="https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/9yhwvn3y_Vinayak_Pic.jpeg" alt="Vinayak Hattangadi" class="hero-image"></div></div>
+            </div>
+        </div>
+    </section>
+
     <section id="certifications" class="certifications-section">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title">Professional Certifications</h2>
             <div class="certifications-grid">
-                <div class="cert-card">
-                    <h3>Azure Solutions Architect Expert</h3>
-                    <p>Microsoft | 2025</p>
-                </div>
-                <div class="cert-card">
-                    <h3>FinOps Certified Practitioner</h3>
-                    <p>The Linux Foundation | 2025</p>
-                </div>
+                <div class="cert-card"><h3>Azure Solutions Architect Expert</h3><p>Microsoft | 2025</p></div>
+                <div class="cert-card"><h3>FinOps Certified Practitioner</h3><p>Linux Foundation | 2025</p></div>
+                <div class="cert-card"><h3>CISM®</h3><p>ISACA | 2024</p></div>
+                <div class="cert-card"><h3>TOGAF®</h3><p>The Open Group | 2021</p></div>
+                <div class="cert-card"><h3>PMP®</h3><p>PMI | 2009</p></div>
                 </div>
         </div>
     </section>
 
+    <footer class="footer"><div class="container"><p>&copy; <span id="year"></span> Vinayak Hattangadi.</p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>
