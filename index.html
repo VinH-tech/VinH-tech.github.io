@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinayak Hattangadi | Technology & Transformation Leader</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌓</button>
 
     <header class="header">
         <div class="container">
@@ -24,19 +24,21 @@
     </header>
 
     <main class="container">
-        <section class="hero-section">...</section>
-
-        <section id="portfolio" class="search-section">
-            <div class="container">
-                <h2 class="section-title">Strategic Portfolio</h2>
-                <div class="search-wrapper">
-                    <input type="text" id="mainSearch" class="search-input" 
-                           placeholder="Search expertise: 'Cloud', 'GCC', 'Unisys'..." 
-                           onkeyup="handleSearch(this.value)">
-                </div>
-                <div id="resultsGrid" class="results-grid"></div>
+        <section class="hero-section">
+            <div class="badge">25+ Years of Global Impact</div>
+            <h1 class="hero-title">Strategic<br>Portfolio</h1>
+            <p class="hero-description">Explore two decades of GCC leadership and digital transformation.</p>
+            
+            <div class="search-wrapper">
+                <input type="text" id="mainSearch" class="search-input" 
+                       placeholder="Search expertise: 'Cloud', 'GCC', 'Unisys'..." 
+                       onkeyup="handleSearch(this.value)">
+                <p id="searchCount" class="search-count"></p>
             </div>
         </section>
+
+        <div id="resultsGrid" class="results-grid">
+            </div>
     </main>
 
     <div id="drawer" class="drawer">
@@ -44,6 +46,12 @@
         <div id="drawerContent" class="drawer-body"></div>
     </div>
 
-    <script src="js/script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Vinayak Hattangadi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
