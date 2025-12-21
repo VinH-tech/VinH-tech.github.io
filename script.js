@@ -1,67 +1,64 @@
-// Set current year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+let allProjects = [];
 
-// Original Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Search Logic with Debouncing
-let searchTimer;
-function handleSearch(query) {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => {
-        fetch(`search?query=${encodeURIComponent(query)}`)
-            .then(res => res.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const newContent = doc.getElementById('resultsGrid').innerHTML;
-                document.getElementById('resultsGrid').innerHTML = newContent;
-            });
-    }, 300);
+// 1. Fetch data on load
+async function loadData() {
+    try {
+        const response = await fetch('projects.json'); // Ensure file is in same directory
+        allProjects = await response.json();
+        renderProjects(allProjects); // Initial display of all projects
+    } catch (err) {
+        console.error("Error loading project data:", err);
+    }
 }
 
-// Deep Dive Drawer Functionality
+// 2. Render Projects to Grid
+function renderProjects(data) {
+    const grid = document.getElementById('resultsGrid');
+    grid.innerHTML = data.map(p => `
+        <div class="card" onclick="openDeepDive('${p.id}')">
+            <span class="id-tag">${p.id}</span>
+            <h3>${p.title}</h3>
+            <p class="company">${p.company}</p>
+            <div class="mini-tags">
+                ${p.taxonomy.keywords.slice(0, 3).map(kw => `<span>#${kw}</span>`).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+// 3. Handle Search (Replaces Java Servlet Logic)
+function handleSearch(query) {
+    const q = query.toLowerCase().trim();
+    const filtered = allProjects.filter(p => {
+        return p.title.toLowerCase().includes(q) ||
+               p.company.toLowerCase().includes(q) ||
+               p.taxonomy.keywords.some(k => k.toLowerCase().includes(q)) ||
+               p.taxonomy.capabilities.some(c => c.toLowerCase().includes(q));
+    });
+    renderProjects(filtered);
+}
+
+// 4. Open Deep Dive Drawer
 function openDeepDive(id) {
-    fetch(`search?id=${id}`)
-        .then(res => res.json())
-        .then(data => {
-            const drawer = document.getElementById('drawer');
-            const content = document.getElementById('drawerContent');
-            content.innerHTML = `
-                <div class="badge">${data.id}</div>
-                <h2 style="margin: 20px 0 10px">${data.title}</h2>
-                <p style="color: var(--text-dim)">${data.company}</p>
-                <hr style="border: 0; border-top: 1px solid var(--border); margin: 20px 0">
-                <p>${data.context}</p>
-                <h4 style="margin-top: 30px">Impact & Milestones</h4>
-                <ul style="padding-left: 20px">
-                    ${data.highlights.map(h => `<li style="margin-bottom: 12px">${h}</li>`).join('')}
-                </ul>
-            `;
-            drawer.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+    const project = allProjects.find(p => p.id === id);
+    if (!project) return;
+
+    const content = `
+        <div class="badge">${project.id}</div>
+        <h2>${project.title}</h2>
+        <p class="company-detail">${project.company}</p>
+        <hr>
+        <p>${project.context}</p>
+        <h4>Key Highlights</h4>
+        <ul>${project.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+    `;
+    document.getElementById('drawerContent').innerHTML = content;
+    document.getElementById('drawer').classList.add('active');
 }
 
 function closeDrawer() {
     document.getElementById('drawer').classList.remove('active');
-    document.body.style.overflow = 'auto';
 }
 
-// Theme Toggle
-function toggleTheme() {
-    const root = document.documentElement;
-    const currentTheme = root.getAttribute('data-theme');
-    root.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-}
+// 5. Initialize
+window.onload = loadData;
