@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Portfolio Search | Vinayak Hattangadi</title>
+    <title>Search Portfolio | Vinayak Hattangadi</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌓</button>
-
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="logo">← HOME</a>
-                <div class="nav-links">
-                    <h1 class="nav-title">Strategic Insights Engine</h1>
-                </div>
+                <h1 class="nav-title">Strategic Insights</h1>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <section class="hero-section">
-            <div class="badge">Advanced Keyword Search</div>
-            <h1 class="hero-title">Experience Search</h1>
-            <p class="hero-description">Filter 25+ years of strategic initiatives by keyword (e.g., 'Cloud', 'Azure', 'ODC').</p>
-            
             <div class="search-wrapper">
-                <input type="text" id="mainSearch" class="search-input" 
-                       placeholder="Try 'Unisys', 'Migration', or 'FinOps'..." 
-                       onkeyup="handleSearch(this.value)">
+                <input type="text" id="mainSearch" class="search-input" placeholder="Search expertise (e.g., 'Cloud', 'ODC')..." onkeyup="handleSearch(this.value)">
                 <p id="searchCount" class="search-count"></p>
             </div>
+            <div id="resultsGrid" class="results-grid"></div>
         </section>
-
-        <div id="resultsGrid" class="results-grid">
-            </div>
     </main>
 
     <div id="drawer" class="drawer">
         <button onclick="closeDrawer()" class="btn-close">&times;</button>
         <div id="drawerContent" class="drawer-body"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
