@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayak Hattangadi | Technology & Transformation Leader</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <h1 class="logo">VINAYAK HATTANGADI</h1>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">...</section>
+
+        <section id="portfolio" class="search-section">
+            <div class="container">
+                <h2 class="section-title">Strategic Portfolio</h2>
+                <div class="search-wrapper">
+                    <input type="text" id="mainSearch" class="search-input" 
+                           placeholder="Search expertise: 'Cloud', 'GCC', 'Unisys'..." 
+                           onkeyup="handleSearch(this.value)">
+                </div>
+                <div id="resultsGrid" class="results-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="drawer" class="drawer">
+        <button onclick="closeDrawer()" class="btn-close">&times;</button>
+        <div id="drawerContent" class="drawer-body"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
