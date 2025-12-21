@@ -1,0 +1,156 @@
+[
+  {
+    "id": "STRAT-001",
+    "title": "C-Suite Strategic Advisory & Transformation Framework",
+    "company": "Unisys / Various",
+    "context": "Over 7 years of experience partnering with CxOs to shape and execute IT strategies through proprietary transformation frameworks.",
+    "highlights": [
+      "Developed a Transformation Framework to align IT initiatives with client business objectives, simplifying decision-making for investment planning.",
+      "Defined the vision and implementation strategy for Enterprise Automation and Observability Platforms, aligned with ROI goals.",
+      "Invited by the Client CTO to present a 5-year technology strategy at their global workshop in San Francisco."
+    ],
+    "taxonomy": {
+      "domains": ["Strategic Advisory", "Enterprise IT"],
+      "capabilities": ["Executive Partnership", "Investment Planning", "Strategic Roadmapping"],
+      "geographies": ["USA", "Global"],
+      "keywords": ["CxO Advisory", "ROI", "Automation", "Transformation Framework"]
+    }
+  },
+  {
+    "id": "GCC-001",
+    "title": "Global ODC Operations & Workforce Scaling",
+    "company": "Optum Global / CenturyLink / Unisys",
+    "context": "Leadership of global, distributed teams (450+ associates) and massive infrastructure operations.",
+    "highlights": [
+      "Directed enterprise IT hosting and network operations supporting 60,000+ servers and 10,000+ business-critical applications.",
+      "Managed workforce strategy and people management for 450 associates across India, Philippines, and Puerto Rico.",
+      "Designed and executed global onshore-offshore workforce strategies to improve productivity, resilience, and cost efficiency.",
+      "Led end-to-end financial accountability for divisions, managing a $2M+ annual budget and $10M+ in cloud spend."
+    ],
+    "taxonomy": {
+      "domains": ["Healthcare", "Telecommunications", "Enterprise IT"],
+      "capabilities": ["GCC Leadership", "Workforce Strategy", "Financial Governance"],
+      "geographies": ["India", "Philippines", "Puerto Rico", "Global"],
+      "keywords": ["ODC", "Scalability", "Resource Management", "Budgeting"]
+    }
+  },
+  {
+    "id": "XFRM-001",
+    "title": "Large-Scale Azure Cloud Modernization (AVS & AVD)",
+    "company": "Unisys",
+    "context": "Leading complex, large-scale cloud transformations for Fortune 50 organizations.",
+    "highlights": [
+      "Spearheaded the migration of 1,000+ on-prem workloads to Azure VMware Solution (AVS).",
+      "Led the migration of Citrix environments (12,000+ users and 100s of virtualized apps) to Azure Virtual Desktop (AVD).",
+      "Managed planning and execution of strategic initiatives to migrate 500+ public endpoints from Azure to private endpoints."
+    ],
+    "taxonomy": {
+      "domains": ["Cloud Infrastructure", "Modernization"],
+      "capabilities": ["Cloud Migration", "Virtualization", "AVS/AVD Implementation"],
+      "geographies": ["Global"],
+      "keywords": ["Azure VMware Solution", "Citrix", "Workload Migration", "Private Endpoints"]
+    }
+  },
+  {
+    "id": "TECH-001",
+    "title": "Zero Trust Network Architecture & Micro-segmentation",
+    "company": "Unisys",
+    "context": "Designing and implementing secure-by-design network architectures for enterprise resilience.",
+    "highlights": [
+      "Designed and implemented Zero Trust Network Architecture with application micro-segmentation using Azure vWAN HUB.",
+      "Collaborated with client architects to re-architect global network flows (North-South/East-West) for high availability.",
+      "Integrated Zscaler solutions, FortiGate NGFW, and NSX firewalls into enterprise cloud ecosystems."
+    ],
+    "taxonomy": {
+      "domains": ["Cybersecurity", "Networking"],
+      "capabilities": ["Zero Trust", "Micro-segmentation", "Security Architecture"],
+      "geographies": ["Global"],
+      "keywords": ["vWAN", "Zscaler", "NGFW", "Network Security"]
+    }
+  },
+  {
+    "id": "SALES-001",
+    "title": "Executive Pursuit Leadership & Deal Shaping",
+    "company": "Lumen / CenturyLink / Various",
+    "context": "Driving revenue growth through complex solution engineering and multi-tower pre-sales leadership.",
+    "highlights": [
+      "Led 400+ pursuits, including 40 major global deals up to $200M TCV.",
+      "Successfully led a complex IT services contract renewal with a TCV of $50M.",
+      "Established pre-sales functions from the ground up, expanding customer footprints by 10x within 18 months."
+    ],
+    "taxonomy": {
+      "domains": ["Managed Services", "Cloud"],
+      "capabilities": ["Pre-sales Strategy", "Bid Management", "Solution Architecture"],
+      "geographies": ["India", "Global"],
+      "keywords": ["TCV", "Pursuit Management", "Deal Strategy", "GTM"]
+    }
+  },
+  {
+    "id": "TECH-002",
+    "title": "Infrastructure as Code (IaC) & SRE Maturity",
+    "company": "Unisys",
+    "context": "Modernizing engineering practices to drive automation and operational speed.",
+    "highlights": [
+      "Implemented and automated Infrastructure as Code (IaC) using Terraform, Ansible, and CloudFormation.",
+      "Built CI/CD pipelines using Jenkins, Python, and Git/Gerrit to accelerate deployment cycles.",
+      "Developed data-driven frameworks to assess and prioritize IT initiatives against business goals."
+    ],
+    "taxonomy": {
+      "domains": ["DevOps", "Automation"],
+      "capabilities": ["IaC Implementation", "CI/CD Orchestration", "SRE Practices"],
+      "geographies": ["Global"],
+      "keywords": ["Terraform", "Ansible", "Jenkins", "Automation"]
+    }
+  },
+  {
+    "id": "GCC-002",
+    "title": "Global Service Delivery & Account CTO Leadership",
+    "company": "Unisys / CenturyLink / Dimension Data",
+    "context": "Executive oversight of IT service delivery, account profitability, and operational excellence.",
+    "highlights": [
+      "Managed service delivery for 3,500+ global hosting customers across 65+ data centers worldwide.",
+      "Led multiple hostile transitions, stabilizing support operations and ensuring SLA compliance.",
+      "Introduced 'shift-left' and automation initiatives, improving L1 productivity and reducing higher-level support effort by 35%."
+    ],
+    "taxonomy": {
+      "domains": ["Managed Services", "Operations"],
+      "capabilities": ["Account Leadership", "SLA Management", "Service Transformation"],
+      "geographies": ["Global"],
+      "keywords": ["Service Delivery", "SLA Compliance", "Shift-Left", "Transition Management"]
+    }
+  },
+  {
+    "id": "TECH-003",
+    "title": "Data Center Consolidation & Tier-3 Build-out",
+    "company": "CenturyLink / IBM",
+    "context": "Managing high-value physical and virtual infrastructure consolidation programs.",
+    "highlights": [
+      "Led the build-out of two Tier-3 data centers in India to host SAP HANA Enterprise Cloud, a $10M solution.",
+      "Orchestrated DC consolidation initiatives for a Fortune 5 organization, addressing complex technical challenges.",
+      "Led IT infrastructure modernization projects with a budget of $20M for large EMEA accounts."
+    ],
+    "taxonomy": {
+      "domains": ["Infrastructure", "Data Centers"],
+      "capabilities": ["DC Consolidation", "Modernization", "Project Management"],
+      "geographies": ["India", "EMEA"],
+      "keywords": ["SAP HANA", "Tier-3 DC", "Infrastructure Modernization"]
+    }
+  },
+  {
+    "id": "STRAT-002",
+    "title": "FinOps, IT Governance & Risk Management",
+    "company": "Various / Unisys",
+    "context": "Ensuring financial accountability and compliance across complex technology estates.",
+    "highlights": [
+      "Led consulting engagements for implementing FinOps and Data Center consolidation assessments.",
+      "Oversaw DC, IAM, vulnerability management, and cybersecurity operations to safeguard enterprise services.",
+      "Served as an Architecture Advisory Board member to enhance governance and decision-making for CXOs."
+    ],
+    "taxonomy": {
+      "domains": ["Governance", "FinOps", "Risk"],
+      "capabilities": ["Cost Governance", "Architecture Advisory", "Cybersecurity Ops"],
+      "geographies": ["Global"],
+      "keywords": ["FinOps", "Vulnerability Management", "Governance Framework"]
+    }
+  }
+]
