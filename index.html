@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinayak Hattangadi - Technology & Transformation Leader</title>
+    <title>Vinayak Hattangadi | Technology Leader</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌓</button>
-
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <h1 class="logo">VINAYAK HATTANGADI</h1>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
                 <div class="nav-links">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#experience" class="nav-link">Experience</a>
@@ -26,43 +27,22 @@
         </div>
     </header>
 
-    <section class="hero-section">
+    <section id="certifications" class="certifications-section">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="badge">Technology & Transformation Leader</div>
-                    <h1 class="hero-title">Vinayak<br>Hattangadi</h1>
-                    <p class="hero-description">20+ years driving digital transformation, GCC/ODC operations, and enterprise solutions for global organizations</p>
-                    <div class="hero-buttons">
-                        <a href="https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/m0x3cnnu_Sr.%20Dir%20WalMart_Full.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-                        <a href="portfolio.html" class="btn btn-secondary">Search Strategic Insights</a>
-                    </div>
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>Azure Solutions Architect Expert</h3>
+                    <p>Microsoft | 2025</p>
                 </div>
-                <div class="hero-image-container"><div class="hero-image-wrapper"><img src="https://customer-assets.emergentagent.com/job_senior-exec-profile/artifacts/9yhwvn3y_Vinayak_Pic.jpeg" alt="Vinayak Hattangadi" class="hero-image"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-list">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div><h3 class="experience-title">Chief Architect / Account CTO</h3><p class="experience-company">Unisys Corporation</p></div>
-                        <span class="experience-badge">Mar 2021 - Sep 25</span>
-                    </div>
-                    <ul class="experience-list-items">
-                        <li>Large-scale transformation & modernization leadership</li>
-                        <li>Executive oversight to the PMO, ensuring governance and alignment</li>
-                        <li>Continuous service improvements – Own & drive CSI roadmaps</li>
-                    </ul>
+                <div class="cert-card">
+                    <h3>FinOps Certified Practitioner</h3>
+                    <p>The Linux Foundation | 2025</p>
                 </div>
                 </div>
         </div>
     </section>
 
-    <footer class="footer"><div class="container"><p>&copy; <span id="year"></span> Vinayak Hattangadi. All rights reserved.</p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>
